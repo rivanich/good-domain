@@ -1,0 +1,315 @@
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*styliser la bare de navigation*/
+header {
+ background-color: #131416;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+nav {
+  display: flex;
+  background-color: #fff;
+  padding: 0 20px;
+  border-radius: 40px;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+  width: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+.nav-item {
+  color: #83818c;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0 11px;
+  font-size: 1.3em;
+  position: relative;
+}
+
+.nav-item:before {
+  content: " ";
+  position: absolute;
+  background-color: #dfe2ea;
+  height: 10px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  bottom: -11px;
+  left: 0;
+  transition: .3s;
+}
+
+.nav-item:not(.is-active):hover:before {
+  bottom: 0;
+
+}
+
+.nav-item:not(.is-active):hover {
+  color: #333;
+}
+
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 10px;
+  transition: .5s;
+  border-radius: 8px 8px 0 0;
+}
+
+/*styliser la bare de navigation*/
+body {
+  height: 100%;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #e5e5e5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #5c2a9d;
+  border-radius: 15px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #b5076b;
+}
+
+/*stylisez la presentation*/
+section {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background: linear-gradient(45deg, #fc466b, #3f5efb);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif, sans-serif;
+}
+
+div.container {
+  position: relative;
+}
+
+ span.text {
+  background: linear-gradient(45deg, #fc466b, #3f5efb);
+  text-transform: uppercase;
+  font-family: serif, cambria, sans-serif;
+  font-size: 2.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  color: rgba(255, 255, 255, .3);
+}
+
+.container {
+  position: relative;
+
+}
+
+section form {
+  background: rgba(255, 255, 255, .3);
+  padding: 3rem;
+  height: 75vh;
+  width: 70vh;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+/* effet sympa a ajouter */
+  font-display: block;
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .4);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+}
+
+#message {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ddd;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+#message svg {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  fill: #FF4754;
+}
+
+p {
+  color: white;
+  font-weight: 500;
+  opacity: .7;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+}
+
+section div a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 13.5px;
+  transition: all .3s;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section a:hover {
+  text-shadow: 2px 2px 6px rgb(0, 0, 0);
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  padding: 1rem;
+  width: 270px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, .2);
+  color: white;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .2) ;
+  transition: all.3s;
+}
+
+::placeholder {
+  color: white;
+}
+
+input:hover, input[type="email"]:focus, inut[type="password"]:focus {
+  background: rgba(255, 255, 255, .3);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, .2);
+}
+
+input[type="button"] {
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1rem;
+  width: 150px;
+}
+
+.drop {
+  background: rgba(255, 255, 255, .3);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 10px;
+  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, .2);
+}
+
+.drop-1 {
+  height: 100px;
+  width: 100px;
+  top: -45px;
+  left: -50px ;
+}
+
+.drop-2 {
+  height: 150px;
+  width: 150px;
+  bottom: -60px;
+  right: -60px;
+}
+
+.drop-3 {
+  height: 100px;
+  width: 100px;
+  top: -45px;
+  right: -50px ;
+}
+
+.drop-4 {
+  height: 100px;
+  width: 100px;
+  bottom: -45px;
+  left: -50px;
+}
+
+/* styliser le pied de la page */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131416;
+}
+.main {
+  height: 30vh;
+}
+
+.icon {
+  width: 65px;
+  height: 65px;
+  margin: 30px;
+  border-radius: 50px;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.icon:nth-child(1) {
+  padding: 10px;
+  fill: #1877f2;
+}
+
+.icon:nth-child(2) {
+  padding: 13px;
+  fill: #25d366;
+}
+
+.icon:nth-child(3) {
+  padding: 10px;
+  fill: #fff;
+}
+
+.icon:nth-child(4) {
+  padding: 10px;
+  fill: #0088cc;
+}
+
+.icon:nth-child(5) {
+  padding: 13px;
+  fill: #1da1fe;
+}
+
+.icon:nth-child(1):hover {
+  box-shadow: 0 0 0 7px #1877f2;
+}
+
+.icon:nth-child(2):hover {
+  box-shadow: 0 0 0 7px #25d366;
+}
+
+.icon:nth-child(3):hover {
+  box-shadow: 0 0 0 7px #5865f2;
+}
+
+.icon:nth-child(4):hover {
+  box-shadow: 0 0 0 7px #0088cc;
+}
+
+.icon:nth-child(5):hover {
+  box-shadow: 0 0 0 7px#1da1fe;
+}
